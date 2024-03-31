@@ -37,7 +37,7 @@ class Enemy(GameSprite):
     def update(self):
         if self.rect.x <= 10:
             self.direction = "right"
-        if self.rect.x >= 300:
+        if self.rect.x >= 350:
             self.direction = "left"
 
         if self.direction == "left":
@@ -85,7 +85,7 @@ final = GameSprite('treasure.png', win_width - 120, win_height - 80, 0)
 
 
 # стіни
-w1 = Wall(154, 205, 50, 10, 20, 670, 10) #self, color_1, color_2, color_3, wall_x, wall_y, wall_width, wall_height
+w1 = Wall(154, 205, 50, 10, 10, 670, 10) #self, color_1, color_2, color_3, wall_x, wall_y, wall_width, wall_height
 w2 = Wall(154, 205, 50, 10, 485, 680, 10)
 w3 = Wall(154, 205, 50, 10, 20, 10, 380)
 w4 = Wall(154, 205, 50, 1200, 130, 10, 350)
@@ -99,8 +99,8 @@ w11 = Wall(154, 205, 50, 270, 100, 10, 390)
 w12 = Wall(154, 205, 50, 370, 100, 310, 10)
 w13 = Wall(154, 205, 50, 280, 180, 320, 10)
 w14 = Wall(154, 205, 50, 680, 20, 10, 380)
-w15 = Wall(154, 205, 50, 370, 260, 310, 10)
-w16 = Wall(154, 205, 50, 360, 260, 10, 150)
+w15 = Wall(154, 205, 50, 370, 280, 310, 10)
+w16 = Wall(154, 205, 50, 360, 280, 10, 120)
 game = True
 finish = False
 clock = time.Clock()
