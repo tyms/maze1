@@ -76,7 +76,7 @@ win_height = 500
 window = display.set_mode((win_width, win_height))
 display.set_caption("Maze")
 background = transform.scale(image.load(
-    "background.jpg"), (win_width, win_height))
+    "background3.png"), (win_width, win_height))
 
 # Персонажі гри:
 player = Player('hero.png', 5, win_height - 80, 4)
@@ -153,7 +153,7 @@ while game:
         w15.draw_wall()
         w16.draw_wall()
     # Ситуація "Програш"
-    if sprite.collide_rect(player, monster) or sprite.collide_rect(player, w1) or sprite.collide_rect(player, w2) or sprite.collide_rect(player, w3):
+    if sprite.collide_rect(player, monster) or sprite.collide_rect(player, w1) or sprite.collide_rect(player, w2) or sprite.collide_rect(player, w3) or sprite.collide_rect(player, w4) or sprite.collide_rect(player, w5) or sprite.collide_rect(player, w6) or sprite.collide_rect(player, w7) or sprite.collide_rect(player, w8) or sprite.collide_rect(player, w9) or sprite.collide_rect(player, w10) or sprite.collide_rect(player, w11) or sprite.collide_rect(player, w12) or sprite.collide_rect(player, w13) or sprite.collide_rect(player, w14) or sprite.collide_rect(player, w15) or sprite.collide_rect(player, w16) :
         finish = True
         window.blit(lose, (200, 200))
         kick.play()
@@ -166,3 +166,4 @@ while game:
 
     display.update()
     clock.tick(FPS)
+
